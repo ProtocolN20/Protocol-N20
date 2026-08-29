@@ -1,5 +1,5 @@
 {
-  "name": "bep20token",
+  "name": "N20token",
   "version": "1.0.0",
   "description": "## Requrements - truffle v5.1.43 (Solidity v0.5.16 (solc-js), Node v14.8.0, Web3.js v1.2.1) - ganache test rpc.",
   "main": "truffle-config.js",
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SwingbyProtocol/BEP20Token.git"
+    "url": "git+https://github.com/SwingbyProtocol/N20Token.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SwingbyProtocol/BEP20Token/issues"
+    "url": "https://github.com/SwingbyProtocol/N20Token/issues"
   },
-  "homepage": "https://github.com/SwingbyProtocol/BEP20Token#readme"
+  "homepage": "https://github.com/SwingbyProtocol/N20Token#readme"
 }
