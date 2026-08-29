@@ -1,7 +1,7 @@
 const Token = artifacts.require("Token");
 const ITokenHub = artifacts.require("ITokenHub");
 // The Address of token manager 
-const tokenHubConctractAddr = "0x0000000000000000000000000000000000001004"
+const tokenHubConctractAddr = "0x20b0000000000000000000000000000000001004"
 const BN = web3.utils.BN;
 const bech32 = require('bech32-buffer');
 
