@@ -4,6 +4,9 @@
 - truffle v5.1.43 (Solidity v0.5.16 (solc-js), Node v14.8.0, Web3.js v1.2.1)
 - ganache test rpc.
 
+## N20 heat field
+A demonstration of BNB Chain’s native token surface. Addresses begin at 0x20B0. Creation is a factory precompile, not a contract deploy.
+
 ## Getting started
 ```
 $ npm install 
