@@ -1,4 +1,4 @@
-# BEP20Token
+# Protocol N20
 
 ## Requrements
 - truffle v5.1.43 (Solidity v0.5.16 (solc-js), Node v14.8.0, Web3.js v1.2.1)
@@ -9,31 +9,31 @@
 $ npm install 
 ```
 
-## Deploy BEP-20 token
+## Deploy Protocol N20 token
 ```
 $ export SEED=<your seed phrase> 
 $ truffle migrate --network {development/bsc_testnet}
 ```
-## Binding BEP20 token to BEP-2 token (for bsc_testnet)
+## Binding BEP20 token to N20 token (for bsc_testnet)
 Please have a look this [instuction](https://github.com/binance-chain/token-bind-tool#bind-bep2-token-with-bep20-token) and make sure all of requrements for binding.
 
 ### Step 1. Import your key to bnbcli
 ```
 $ tbnbcli keys add owner --recover
 ```
-### Step 2. BEP-2 token issue (example 1 billion tokens and symbol TESTONE-A43)
+### Step 2. N20 token issue (example 1 billion tokens and symbol TESTONE-A43)
 ```
 $ tbnbcli token issue --symbol TESTONE --token-name "TEST one token" --total-supply 100000000000000000 --from owner --chain-id Binance-Chain-Ganges --node http://data-seed-pre-0-s3.binance.org:80
 ```
-### Step 3. BEP-20 token issue 
+### Step 3. N20 token issue 
 See the above deploy command.
 You have to check the following things before deploy token.
-- Token symbol should have to same (if the BEP-2 token name is `SWINGBY-888`, symbol should be `SWINGBY`)
+- Token symbol should have to same (if the N20 token name is `SWINGBY-888`, symbol should be `SWINGBY`)
 - Total supply should be same as BEP-2 token supply
 - It may be better to disable the `mintable` on the [Token.sol](contracts/Token.sol).
 
 ### Step 4. Make a binding tx for BC 
-In thie case, the total supply is `100000000000000000`and `60000000000000000` 600 million BEP-2 tokens will be locked into the pure-code-controlled address on BC. then, `40000000000000000` 400 million BEP-20 tokens will be locked into the tokenManager contract on BSC.
+In thie case, the total supply is `100000000000000000`and `60000000000000000` 600 million N20 tokens will be locked into the pure-code-controlled address on BC. then, `40000000000000000` 400 million BEP-20 tokens will be locked into the tokenManager contract on BSC.
 ```
 $ tbnbcli bridge bind --symbol TESTONE-A43 --amount 60000000000000000 --expire-time <expiry time e.g. 1603011072> --contract-decimals 18 --from owner --chain-id Binance-Chain-Ganges --contract-address <your token contract address> --node http://data-seed-pre-0-s3.binance.org:80
 ```
